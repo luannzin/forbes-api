@@ -8,12 +8,12 @@ export default new Router()
     return json({
       made: "by luannzin",
       guide: {
-        "/:profile": "Get the profile data from Forbes",
+        "/profile/:profile": "Get the profile data from Forbes",
         "/list": "Get the top 10 richest people",
       },
     });
   })
-  .get("/:profile", async (ctx) => {
+  .get("/profile/:profile", async (ctx) => {
     const data = await extractForbesData(ctx.params.profile);
 
     return json({
