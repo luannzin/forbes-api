@@ -3,7 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "bun-vercel": "^1.0.0-alpha.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -16,6 +17,6 @@
     "cheerio": "^1.0.0"
   },
   "scripts": {
-    "start": "bun src/index.ts"
+    "build": "bun-vercel ./src/index.ts"
   }
 }
